@@ -1,14 +1,14 @@
 import React from 'react'
-import useMyHook from "./my-hook";
+import useMyErrorMessage from "./my-hook";
 
 export default function Hello() {
-  const [count, setCount] = useMyHook(0);
+  const {component, showError} = useMyErrorMessage();
   return (
     <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
+      <button onClick={() => showError(`New error: ${Date.now()}`)}>Throw Error</button>
+      <button onClick={() => showError(undefined)}>Clear Error</button>
+      <hr/>
+      {component}
     </div>
   );
 }

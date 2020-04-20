@@ -1,5 +1,5 @@
-JavaScript React State Hook Custom Hook Demo
-=================================
+JavaScript React State Hook Component from Custom Hook Demo
+===========================================================
 
 如何定义一个自己的Hook.
 
